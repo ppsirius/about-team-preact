@@ -1,12 +1,32 @@
-$color: #345;
+/* Common */
+@import '~minireset.css/minireset.sass';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=latin-ext');
+@import 'styles/variables';
+
+/* Components */
+@import 'styles/team-member';
 
 html, body {
-	font: 14px/1.21 'Helvetica Neue', arial, sans-serif;
-	font-weight: 400;
-	color: $color;
+	height: 100%;
 }
 
-h1 {
+.app {
+	min-height: 100%;
+	background-image: url('assets/bg.png');
+	font-family: $main-font;
+	font-size: $main-font-size;
+	line-height: $main-line-height;
+}
+
+.container {
+	padding: $gutter;
+	max-width: 1260px;
+}
+
+.section-header {
+	color: $minsk;
+	font-weight: $semibold;
+	font-size: 30px;
+	margin-bottom: 2 * $gutter;
 	text-align: center;
 }
-

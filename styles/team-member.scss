@@ -1,0 +1,50 @@
+.team__member {
+  font-size: 14px;
+  font-weight: $light;
+  text-align: center;
+
+  &__avatar {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    max-width: 180px;
+    margin: 0 auto;
+    background-color: $scooter;
+    border-radius: 50%;
+
+    &:before,
+    &:after {
+      position: absolute;
+      width: 2 * $gutter;
+      height: 2 * $gutter;
+      top: 5px;
+      right: 8px;
+      content: '';
+    }
+
+    &:before {
+      background-color: $minsk;
+      border-radius: 50%;
+    }
+
+    &:after {
+      background-image: url('assets/mail.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-top: 1.5 * $gutter;
+    color: $minsk;
+    font-size: 20px;
+    font-weight: $regular;
+  }
+
+  &__position {
+    display: block;
+    margin: $gutter 0 (.5 * $gutter) 0;
+    color: $scooter;
+  }
+}

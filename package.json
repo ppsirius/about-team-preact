@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "about-team-preact",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "eslint-config-standard-preact": "^1.1.6",
+    "minireset.css": "0.0.3",
     "preact": "^8.2.1",
     "preact-compat": "^3.17.0"
   }
