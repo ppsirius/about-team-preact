@@ -8,7 +8,7 @@ export default class TeamMember extends Component {
           <img
             class="member__avatar__image"
             src={props.image}
-            alt="member name"
+            alt={props.name}
           />
         </div>
         <span class="member__name">{props.name}</span>

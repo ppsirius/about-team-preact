@@ -1,3 +1,39 @@
 .team {
+  min-height: 100vh;
 
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &.container {
+    @media (min-width: 768px) {
+      padding: 3 * $gutter;
+    }
+  }
+
+  &__title {
+    color: $minsk;
+    font-weight: $regular;
+    font-size: 30px;
+    margin-bottom: 2 * $gutter;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 60px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 4 * $gutter;
+    }
+  }
+
+  &__list {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
 }

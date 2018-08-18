@@ -4,6 +4,14 @@
   text-align: center;
   margin-bottom: 3 * $gutter;
 
+  @media (min-width: 768px) {
+    margin: 26px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 3 * $gutter;
+  }
+
   &__avatar {
     position: relative;
     width: 180px;

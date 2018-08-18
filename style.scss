@@ -1,32 +1,38 @@
 /* Common */
-@import '~minireset.css/minireset.sass';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=latin-ext');
-@import 'styles/variables';
+@import "~minireset.css/minireset.sass";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=latin-ext");
+@import "styles/variables";
 
 /* Components */
-@import 'styles/team-member';
+@import "styles/about-team";
+@import "styles/team-member";
 
-html, body {
-	height: 100%;
+body {
+  height: 100%;
 }
 
 .app {
-	min-height: 100%;
-	background-image: url('assets/bg.png');
-	font-family: $main-font;
-	font-size: $main-font-size;
-	line-height: $main-line-height;
+  min-height: 100%;
+  background-image: url("assets/bg.png");
+  font-family: $main-font;
+  font-size: $main-font-size;
+  line-height: $main-line-height;
 }
 
 .container {
-	padding: $gutter;
-	max-width: 1260px;
+  padding: $gutter;
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 .section-header {
-	color: $minsk;
-	font-weight: $semibold;
-	font-size: 30px;
-	margin-bottom: 2 * $gutter;
-	text-align: center;
+  color: $minsk;
+  font-weight: $regular;
+  font-size: 30px;
+  margin-bottom: 2 * $gutter;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+  }
 }

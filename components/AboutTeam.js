@@ -19,7 +19,7 @@ export default class AboutTeam extends Component {
   render() {
     return (
       <section class="team container">
-        <h2 class="team__title section-header">Meet our team</h2>
+        <h2 class="team__title">Meet our team</h2>
         <ul class="team__list">{this.generateTeam(memebers)}</ul>
       </section>
     );
