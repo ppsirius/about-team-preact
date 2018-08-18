@@ -1,22 +1,20 @@
-import { Component } from 'preact';
-
-export default class TeamMember  extends Component {
-	render() {
-		return (
-      <li class="team__member">
-        <div class="team__member__avatar">
-
+import { Component } from "preact";
+export default class TeamMember extends Component {
+  render(props) {
+    return (
+      <li class="member">
+        <div class="member__avatar">
+          <div class="member__avatar__icon" />
+          <img
+            class="member__avatar__image"
+            src={props.image}
+            alt="member name"
+          />
         </div>
-        <span class="team__member__name">
-          Basia Sołtyńska
-        </span>
-        <span class="team__member__position">
-          Founder
-        </span>
-        <span class="team__member__location">
-          Warsaw
-        </span>
+        <span class="member__name">{props.name}</span>
+        <span class="member__position">{props.position}</span>
+        <span class="member__location">{props.location}</span>
       </li>
-		);
-	}
+    );
+  }
 }
