@@ -7,6 +7,7 @@ export default class AboutTeam extends Component {
     return teamMembers.map(member => {
       return (
         <TeamMember
+          id={member.id}
           name={member.name}
           image={member.image}
           position={member.position}

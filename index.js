@@ -1,15 +1,9 @@
-import "./style";
-import { Component } from "preact";
-import AboutTeam from "./components/AboutTeam";
-import TeamSlider from "./components/TeamSlider";
+import App from "./components/App";
+import { Provider } from "preact-redux";
+import store from "./store";
 
-export default class App extends Component {
-  render() {
-    return (
-      <div class="app">
-        <AboutTeam />
-        <TeamSlider />
-      </div>
-    );
-  }
-}
+export default () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
