@@ -1,11 +1,13 @@
 /* Common */
 @import "~minireset.css/minireset.sass";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=latin-ext");
+@import "~slick-carousel/slick/slick.css";
 @import "styles/variables";
 
 /* Components */
 @import "styles/about-team";
 @import "styles/team-member";
+@import "styles/slider";
 
 html {
   width: 100%;

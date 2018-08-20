@@ -1,4 +1,5 @@
 import { Component } from "preact";
+
 export default class TeamMember extends Component {
   render(props) {
     return (
