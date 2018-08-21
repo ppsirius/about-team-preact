@@ -30,10 +30,8 @@
     "minireset.css": "^0.0.3",
     "preact": "^8.2.1",
     "preact-compat": "^3.17.0",
-    "preact-redux": "^2.0.3",
     "react": "^16.4.2",
     "react-slick": "^0.23.1",
-    "redux": "^4.0.0",
     "slick-carousel": "^1.8.1"
   }
 }

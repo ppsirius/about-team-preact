@@ -29,6 +29,10 @@ export default class App extends Component {
     }
   };
 
+  componentWillReceiveProps(nextProps) {
+    this.slider.slickGoTo(nextProps.slideIndex, true);
+  }
+
   componentDidMount() {
     addEventListener("click", this.openSlider);
     addEventListener("click", this.closeSlider);

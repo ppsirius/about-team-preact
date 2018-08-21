@@ -14,7 +14,7 @@ export default class TeamSlider extends Component {
   };
 
   componentWillReceiveProps(nextProps) {
-    this.slider.slickGoTo(nextProps.slideIndex);
+    this.slider.slickGoTo(nextProps.slideIndex, true);
   }
 
   generateSlides = slides => {
