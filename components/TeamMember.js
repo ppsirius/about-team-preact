@@ -1,18 +1,10 @@
 import { Component } from "preact";
-import store from "../store";
 
 export default class TeamMember extends Component {
-  openSlider = (e, data) => {
-    store.dispatch({
-      type: "OPEN_SLIDER",
-      id: e.target.id
-    });
-  };
-
   render(props) {
     return (
       <li class="member">
-        <div class="member__avatar" id={props.id} onClick={this.openSlider}>
+        <div class="member__avatar" id={props.id}>
           <div class="member__avatar__icon" />
           <img
             class="member__avatar__image"

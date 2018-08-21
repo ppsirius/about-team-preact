@@ -1,16 +1,32 @@
 import { Component } from "preact";
 import Slider from "react-slick";
+import cx from "classnames";
+import Slide from "./Slide";
+import { members } from "./members";
 
 export default class TeamSlider extends Component {
   next = () => {
     this.slider.slickNext();
   };
+
   previous = () => {
     this.slider.slickPrev();
   };
 
+  componentWillReceiveProps(nextProps) {
+    this.slider.slickGoTo(nextProps.slideIndex);
+  }
+
+  generateSlides = slides => {
+    return slides.map(slide => {
+      return (
+        <Slide id={slide.id} name={slide.name} position={slide.position} />
+      );
+    });
+  };
+
   render() {
-    var settings = {
+    const settings = {
       dots: false,
       arrows: false,
       infinite: true,
@@ -19,28 +35,15 @@ export default class TeamSlider extends Component {
       slidesToScroll: 1
     };
 
+    const classNames = cx("slider-wrapper", {
+      "is-opened": this.props.sliderIsOpened
+    });
+
     return (
-      <div class="slider-wrapper">
+      <div class={classNames}>
         <div className="slider">
-          <Slider ref={e => (this.slider = e)} {...settings}>
-            <div className="slider__slide">
-              <div className="slider__slide__wrapper">
-                <span className="slider__slide__position">Founder</span>
-                <span className="slider__slide__name">Barbar Jakastam</span>
-              </div>
-            </div>
-            <div className="slider__slide">
-              <div className="slider__slide__wrapper">
-                <span className="slider__slide__position">Founder</span>
-                <span className="slider__slide__name">Barbar Jakastam</span>
-              </div>
-            </div>
-            <div className="slider__slide">
-              <div className="slider__slide__wrapper">
-                <span className="slider__slide__position">Founder</span>
-                <span className="slider__slide__name">Barbar Jakastam</span>
-              </div>
-            </div>
+          <Slider ref={slider => (this.slider = slider)} {...settings}>
+            {this.generateSlides(members)}
           </Slider>
           <div className="arrows">
             <img
@@ -54,6 +57,9 @@ export default class TeamSlider extends Component {
               onClick={this.next}
             />
           </div>
+          <img src="/assets/close.png" class="slider__close">
+            close
+          </img>
         </div>
       </div>
     );

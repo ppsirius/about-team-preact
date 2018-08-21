@@ -5,8 +5,10 @@ export default class Slide extends Component {
     return (
       <div className="slider__slide">
         <div className="slider__slide__wrapper">
-          <span className="slider__slide__position">Founder</span>
-          <span className="slider__slide__name">Barbar Jakastam</span>
+          <span className="slider__slide__position">{props.position}</span>
+          <span className="slider__slide__name">
+            {`${props.name} ${props.id}`}
+          </span>
         </div>
       </div>
     );

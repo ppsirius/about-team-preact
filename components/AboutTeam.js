@@ -1,6 +1,6 @@
 import { Component } from "preact";
 import TeamMember from "./TeamMember";
-import { memebers } from "./members";
+import { members } from "./members";
 
 export default class AboutTeam extends Component {
   generateTeam = teamMembers => {
@@ -21,7 +21,7 @@ export default class AboutTeam extends Component {
     return (
       <section class="team container">
         <h2 class="team__title">Meet our team</h2>
-        <ul class="team__list">{this.generateTeam(memebers)}</ul>
+        <ul class="team__list">{this.generateTeam(members)}</ul>
       </section>
     );
   }
